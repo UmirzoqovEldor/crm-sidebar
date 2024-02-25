@@ -5,23 +5,24 @@ import { analitk, data, exit, person, setting, vectors } from "../assets/data";
 import { render } from "react-dom";
 
 class Sidebar extends Component {
+  state = {
+    activ: [],
+  };
   render() {
-    this.state = {
-      activ: [],
-    };
     function onSubmit(params) {
       if (this.state.activ.includes(params)) {
-        let res = this.state.activ.filter((val) => val !== params);
-        this.setState({ activ: res });
+        let activ = this.state.activ.filter((val) => val !== params);
+        this.setState({ activ });
       } else {
         let activ = [...this.state.activ, params];
         this.setState({ activ });
       }
-      console.log(this.state.activ);
     }
-    // function isActib(title) {
-    //   return this.state.activ.includes(title)
-    // }
+
+    function isActib(event) {
+      console.log(event);
+      return this.state.activ.includes(title);
+    }
     return (
       <>
         <SaidContainer>
@@ -43,7 +44,12 @@ class Sidebar extends Component {
               >
                 <List.Img src={valu.img}></List.Img>
                 <List.Title active="true">{valu.title}</List.Title>
-                <List.Icon Rotet={"model"} src={valu.icon}></List.Icon>
+                <List.Icon
+                  icon={() => {
+                    isActib.bind(this)(valu.title);
+                  }}
+                  src={valu.icon}
+                ></List.Icon>
               </List>
             ))}
           </Profl>

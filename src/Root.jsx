@@ -10,6 +10,7 @@ class Root extends Component {
         <Sidebar />
         <div>
           <Header />
+          
           <Body />
         </div>
       </div>

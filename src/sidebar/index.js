@@ -76,7 +76,7 @@ List.Icon = styled.img`
   width: 20px;
   height: 20px;
   margin-left: 60px;
-  transform: ${(icon) => icon && "rotate(90deg)"};
+  transform: ${({icon}) => icon && "rotate(90deg)"};
 `;
 List.Title = styled("div")`
   margin-top: ${({ last }) => last && "auto"};
