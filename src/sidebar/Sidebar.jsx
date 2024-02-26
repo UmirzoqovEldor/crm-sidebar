@@ -26,7 +26,7 @@ class Sidebar extends Component {
     return (
       <>
         <SaidContainer>
-          <Name>webbrin.crm</Name>
+          <Name >webbrin.crm</Name>
           <Img>
             <Persin src={person}></Persin>
             <div>

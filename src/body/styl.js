@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 
 export const Contanier = styled("div")`
   position: relative;
+  background-color: red;
 `;
 export const Popup = styled("div")`
   padding: 32px 48px;
@@ -10,6 +11,7 @@ export const Popup = styled("div")`
   position: absolute;
   top: 20px;
   left: 250px;
+  
 `;
 const base = css`
   width: 77%;
