@@ -3,6 +3,7 @@ import { Img, List, Name, Persin, Profl, SaidContainer } from ".";
 
 import { analitk, data, exit, person, setting, vectors } from "../assets/data";
 import { render } from "react-dom";
+import { ListItem } from "./ListItem";
 
 class Sidebar extends Component {
   state = {
@@ -26,7 +27,7 @@ class Sidebar extends Component {
     return (
       <>
         <SaidContainer>
-          <Name >webbrin.crm</Name>
+          <Name>webbrin.crm</Name>
           <Img>
             <Persin src={person}></Persin>
             <div>
@@ -35,22 +36,8 @@ class Sidebar extends Component {
             </div>
           </Img>
           <Profl>
-            {data.map((valu) => (
-              <List
-                onClick={() => {
-                  onSubmit.bind(this)(valu.title);
-                }}
-                key={valu.id}
-              >
-                <List.Img src={valu.img}></List.Img>
-                <List.Title active="true">{valu.title}</List.Title>
-                <List.Icon
-                  icon={() => {
-                    isActib.bind(this)(valu.title);
-                  }}
-                  src={valu.icon}
-                ></List.Icon>
-              </List>
+            {data.map((value) => (
+              <ListItem item={value} />
             ))}
           </Profl>
           <List>

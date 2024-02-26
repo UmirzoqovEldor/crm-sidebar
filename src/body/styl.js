@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 export const Contanier = styled("div")`
   position: relative;
   background-color: red;
+  transition:transform 0.4s,top 0.4s;
 `;
 export const Popup = styled("div")`
   padding: 32px 48px;
@@ -12,6 +13,7 @@ export const Popup = styled("div")`
   top: 20px;
   left: 250px;
   
+  transform: translate(50% 50%);
 `;
 const base = css`
   width: 77%;
