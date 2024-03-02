@@ -1,5 +1,5 @@
 import { Component } from "react";
-import Modal from "./Modal";
+
 
 
 class Body extends Component{
@@ -7,7 +7,7 @@ class Body extends Component{
         return(
             <>
             <h1>Body</h1>
-            <Modal/>
+            
             </>
         )
     }
