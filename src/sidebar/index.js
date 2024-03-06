@@ -45,7 +45,7 @@ export const List = styled("div")`
   padding: 12px 0;
   height: 30px;
   margin-top: ${({ last }) => last && "auto"};
-  
+
   & path {
     fill: red !important;
     color: red;
@@ -67,29 +67,32 @@ List.Img = styled.img`
   width: 20px;
   height: 20px;
   margin-left: 30px;
-
-  & path {
-    fill: white !important;
-  }
 `;
 List.Icon = styled.img`
   width: 20px;
   height: 20px;
   margin-left: 60px;
-  transform: ${({icon}) => icon && "rotate(90deg)"};
 `;
 List.Title = styled("div")`
   margin-top: ${({ last }) => last && "auto"};
   width: 30%;
   margin: 0 16px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
   line-height: 20px;
   color: #1890ff;
-  color: white;
 `;
 export const Profl = styled("div")`
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid #253e5f;
+`;
+export const ClickList = styled("div")`
+  
+  padding: 10px;
+  margin-left: 55px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  color: white;
 `;

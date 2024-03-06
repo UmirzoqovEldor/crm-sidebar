@@ -1,17 +1,16 @@
 import { Component } from "react";
-import Sidebar from "./sidebar/Sidebar";
-import Body from "./body/Body";
+
 import Header from "./header/Header";
+import Sidebar from "./sidebar/Sidebar";
 
 class Root extends Component {
   render() {
     return (
       <div className="crm-body">
         <Sidebar />
+
         <div>
           <Header />
-          
-          <Body />
         </div>
       </div>
     );

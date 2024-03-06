@@ -1,13 +1,13 @@
-import { Component } from "react";
+import { useContext } from "react";
+import { FunctinContext } from "../context/Student";
 
+const Header = () => {
+  const [array, setArray] = useContext(FunctinContext);
 
-class Header extends Component{
-    render(){
-        return(
-            <>
-           <h1>Header</h1>
-            </>
-        )
-    }
-}
-export default Header
+  return (
+    <>
+      <h1>Header {array.length}</h1>
+    </>
+  );
+};
+export default Header;

@@ -6,6 +6,8 @@ export const Contanier = styled("div")`
   transition:transform 0.4s,top 0.4s;
 `;
 export const Popup = styled("div")`
+/* background-color: red; */
+  transition:transform 0.4s,top 0.4s;
   padding: 32px 48px;
   width: 450px;
   height: 300px;

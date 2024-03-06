@@ -1,14 +1,12 @@
-import { useState } from "react";
+
 import { Contanier, Popup } from "./styl";
 
-const Modal = () => {
-  const [modal, setModal] = useState(false);
-  function toggleModal() {
-    setModal(!modal);
-  }
+const Modal = ({modal,click}) => {
+  
+  
   return (
     <div>
-      <button onClick={toggleModal}>meni bos</button>
+      
 
       {modal && (
         <Contanier>
@@ -27,7 +25,7 @@ const Modal = () => {
                 <label>
                   <Popup.title>Bir stavka</Popup.title>
                 </label>
-                <Popup.StavIn type="text" pl></Popup.StavIn>
+                <Popup.StavIn type="text" ></Popup.StavIn>
               </div>
               <div>
                 <label>
@@ -40,7 +38,7 @@ const Modal = () => {
               </div>
             </Popup.Stav>
             <Popup.Footer>
-              <Popup.Btn1 onClick={toggleModal}>O'chrish</Popup.Btn1>
+              <Popup.Btn1 onClick={click}>O'chrish</Popup.Btn1>
               <Popup.Btn2>Saqlash</Popup.Btn2>
             </Popup.Footer>
           </Popup>
